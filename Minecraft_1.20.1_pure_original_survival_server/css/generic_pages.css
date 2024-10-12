@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../png/wallpaper_minecraft_2560x1440.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+.block-image {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.fade-in.active {
+    opacity: 1;
+}
+.slide-in {
+    animation: slideInLeft 2s forwards;
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+  /* 设置 <fieldset> 的样式 */
+  fieldset {
+    border: 3px solid; /* 3px边框 */
+    padding: 20px; /* 20px内边距 */
+    margin: 20px; /* 20px外边距 */
+    color: white; /* 白色字体 */
+    font-weight: bold; /* 粗体文字 */
+  }
+  /* 设置 <legend> 的样式 */
+  legend {
+    color: white; /* 白色字体 */
+    font-weight: bold; /* 粗体文字 */
+  }
+.center-text {
+    text-align: center;
+}
+.pink-bar {
+    width: 100%;
+    height: 75px;
+    background-color: #ff80ab;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.nav-button {
+     display: inline-block; /* 使元素以内联块的形式显示，允许设置宽度和高度 */
+     width: 200px; /* 设置按钮的宽度为200像素 */
+     margin: 0 25px; /* 上下无外边距，左右各25像素的外边距 */
+     padding: 10px 20px; /* 上下内边距为10像素，左右内边距为20像素 */
+     background-color: #ffffff; /* 背景颜色设置为白色 */
+     color: #000000; /* 文字颜色设置为黑色 */
+     border: none; /* 边框设置为无 */
+     border-radius: 100px; /* 边角设置为圆角，半径为100像素 */
+     cursor: pointer; /* 鼠标悬停时显示指针，表示可点击 */
+     text-decoration: none; /* 文本装饰设置为无，移除下划线等装饰 */
+	 text-align: center;/*文字居中*/
+     font-size: 16px; /* 设置文字大小为16像素 */
+     transition: background-color 0.3s ease; /* 背景颜色变化的过渡效果，持续时间为0.3秒，使用缓和的过渡方式 */
+}
+.nav-button:hover {
+    background-color: #737373;
+}
+.center-text p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.button-container {
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .nav-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+p, h1, h2, h3, h4, h5, h6, ol, li, a {
+    color: #EEE;
+    text-shadow: none
+}
